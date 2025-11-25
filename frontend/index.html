@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li onclick="showPage('topCoins')">🔥 Top Coins</li>
+            <li onclick="showPage('overview')">📈 Overview</li>
+            <li onclick="showPage('analyst')">🔍 Analyst</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- Top Coins -->
+        <div id="topCoins" class="page">
+            <div class="card">
+                <h2>🔥 Top Coins</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Symbol</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Volume 24h</th>
+                                <th>24h %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topCoinsTable">
+                            <!-- JS fill here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Market Cap Chart</h3>
+                <canvas id="topCoinsChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <div id="overview" class="page" style="display:none">
+            <div class="card">
+                <h2>📈 Market Overview (30 ngày)</h2>
+                <canvas id="overviewChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Analyst -->
+        <div id="analyst" class="page" style="display:none">
+            <div class="card">
+                <h2> Analyst Snapshot</h2>
+
+                <input id="symbolInput" placeholder="Nhập symbol (vd: btc)" />
+                <button onclick="loadAnalyst()">Xem biểu đồ</button>
+
+                <canvas id="analystChart" style="margin-top:20px;"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/* ===== Base ===== */
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f4f6fa;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+}
+
+/* ===== Navigation ===== */
+nav {
+    background: #111827;
+    padding: 14px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+nav li:hover {
+    background: #374151;
+}
+
+/* ===== Content Container ===== */
+.container {
+    padding: 20px;
+}
+
+.page {
+    animation: fade 0.3s ease-in-out;
+}
+
+/* Fade animation */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== Input & Button ===== */
+input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+button {
+    padding: 8px 14px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #005ddd;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+/* ===== TABLE ===== */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #1e293b;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:nth-child(odd) {
+    background: #f8fafc;
+}
+
+/* Tăng/giảm màu */
+.green {
+    color: #10b981;
+    font-weight: bold;
+}
+
+.red {
+    color: #ef4444;
+    font-weight: bold;
+}
